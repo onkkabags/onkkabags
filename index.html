@@ -1,43 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Website</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
-      color: white;
-      text-align: center;
-    }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
-    p {
-      font-size: 1.25rem;
-      max-width: 500px;
-    }
-    a {
-      color: #ffeb3b;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONKKA BAGS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #222;
+            padding: 20px;
+        }
+        .header-title {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+        }
+        .menu {
+            display: flex;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+        .menu a:hover {
+            background: #666;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+            max-width: 900px;
+            width: 100%;
+            margin: 40px auto;
+            flex-grow: 1;
+        }
+        .image-box {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .image-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        .image-box:hover img {
+            transform: scale(1.05);
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .image-box:hover .overlay {
+            opacity: 1;
+        }
+        .footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .header-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .menu {
+                margin-top: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>Welcome to My Website</h1>
-  <p>This is a placeholder page hosted on <a href="https://pages.github.com" target="_blank">GitHub Pages</a>. Replace this content with your own HTML, CSS, and JavaScript.</p>
+    <div class="header-container">
+        <div class="header-title">Modern Product Website</div>
+        <nav class="menu">
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </div>
+    <div class="container">
+        <a href="#" class="image-box">
+            <img src="img/ACP_20130505_401-300x400.jpg" alt="Image 1">
+            <div class="overlay">Image 1</div>
+        </a>
+        <a href="#" class="image-box">
+            <img src="image2.jpg" alt="Image 2">
+            <div class="overlay">Image 2</div>
+        </a>
+        <a href="#" class="image-box">
+            <img src="image3.jpg" alt="Image 3">
+            <div class="overlay">Image 3</div>
+        </a>
+        <a href="#" class="image-box">
+            <img src="image4.jpg" alt="Image 4">
+            <div class="overlay">Image 4</div>
+        </a>
+        <a href="#" class="image-box">
+            <img src="image5.jpg" alt="Image 5">
+            <div class="overlay">Image 5</div>
+        </a>
+        <a href="#" class="image-box">
+            <img src="image6.jpg" alt="Image 6">
+            <div class="overlay">Image 6</div>
+        </a>
+    </div>
+    <footer class="footer">&copy; 2025 Modern Product Website. All Rights Reserved.</footer>
 </body>
 </html>
