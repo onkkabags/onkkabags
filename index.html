@@ -1,151 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ONKKA BAGS</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #222;
-            padding: 20px;
-        }
-        .header-title {
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-            margin: 0;
-        }
-        .menu {
-            display: flex;
-        }
-        .menu a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            font-size: 18px;
-            transition: background 0.3s;
-        }
-        .menu a:hover {
-            background: #666;
-        }
-        .container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 10px;
-            max-width: 900px;
-            width: 100%;
-            margin: 40px auto;
-            flex-grow: 1;
-        }
-        .image-box {
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .image-box img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.3s ease;
-        }
-        .image-box:hover img {
-            transform: scale(1.05);
-        }
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 20px;
-            font-weight: bold;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        .image-box:hover .overlay {
-            opacity: 1;
-        }
-        .footer {
-            background-color: #222;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            font-size: 14px;
-        }
-        @media (max-width: 768px) {
-            .container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        @media (max-width: 480px) {
-            .container {
-                grid-template-columns: repeat(1, 1fr);
-            }
-            .header-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .menu {
-                margin-top: 10px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Onkka Bags</title>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fefefe;
+    color: #333;
+    line-height: 1.5;
+  }
+
+  /* Navigation */
+  nav {
+    background-color: #2b2b2b;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 2rem;
+  }
+
+  nav .logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+
+  nav .logo-img img {
+    height: 32px;
+    width: 32px;
+  }
+
+  /* Intro */
+  .intro {
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #f5f5f5;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+
+  /* Gallery */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  .gallery a {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+
+  .gallery img {
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+  }
+
+  /* Hover overlay */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(43, 43, 43, 0.9);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    padding: 0.5rem;
+  }
+
+  .gallery a:hover img {
+    transform: scale(1.05);
+  }
+
+  .gallery a:hover .overlay {
+    opacity: 1;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 1.5rem 0;
+    color: #555;
+    border-top: 1px solid #ddd;
+    margin-top: 2rem;
+  }
+
+  footer a {
+    color: #555;
+    text-decoration: none;
+  }
+</style>
 </head>
 <body>
-    <div class="header-container">
-        <div class="header-title">Modern Product Website</div>
-        <nav class="menu">
-            <a href="#">Home</a>
-            <a href="#">Products</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-        </nav>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">ONKKA BAGS</div>
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Purchase</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="logo-img">
+      <img src="logo.png" alt="Onkka Logo">
     </div>
-    <div class="container">
-        <a href="#" class="image-box">
-            <img src="img/ACP_20130505_401-300x400.jpg" alt="Image 1">
-            <div class="overlay">Image 1</div>
-        </a>
-        <a href="#" class="image-box">
-            <img src="image2.jpg" alt="Image 2">
-            <div class="overlay">Image 2</div>
-        </a>
-        <a href="#" class="image-box">
-            <img src="image3.jpg" alt="Image 3">
-            <div class="overlay">Image 3</div>
-        </a>
-        <a href="#" class="image-box">
-            <img src="image4.jpg" alt="Image 4">
-            <div class="overlay">Image 4</div>
-        </a>
-        <a href="#" class="image-box">
-            <img src="image5.jpg" alt="Image 5">
-            <div class="overlay">Image 5</div>
-        </a>
-        <a href="#" class="image-box">
-            <img src="image6.jpg" alt="Image 6">
-            <div class="overlay">Image 6</div>
-        </a>
-    </div>
-    <footer class="footer">&copy; 2025 Modern Product Website. All Rights Reserved.</footer>
+  </nav>
+
+  <!-- Intro -->
+  <div class="intro">
+    Al Onkka sews handmade luggage, messenger bags, backpacks, and duffels.
+  </div>
+
+  <!-- Gallery -->
+  <div class="gallery">
+    <a href="page1.html">
+      <img src="image1.jpg" alt="Bag 1">
+      <div class="overlay">Bag 1</div>
+    </a>
+    <a href="page2.html">
+      <img src="image2.jpg" alt="Bag 2">
+      <div class="overlay">Bag 2</div>
+    </a>
+    <a href="page3.html">
+      <img src="image3.jpg" alt="Bag 3">
+      <div class="overlay">Bag 3</div>
+    </a>
+    <a href="page4.html">
+      <img src="image4.jpg" alt="Bag 4">
+      <div class="overlay">Bag 4</div>
+    </a>
+    <a href="page5.html">
+      <img src="image5.jpg" alt="Bag 5">
+      <div class="overlay">Bag 5</div>
+    </a>
+    <a href="page6.html">
+      <img src="image6.jpg" alt="Bag 6">
+      <div class="overlay">Bag 6</div>
+    </a>
+    <a href="page7.html">
+      <img src="image7.jpg" alt="Bag 7">
+      <div class="overlay">Bag 7</div>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; Onkka Bags 2024
+  </footer>
+
 </body>
 </html>
