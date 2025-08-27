@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Onkka Bags</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 <style>
   * {
     box-sizing: border-box;
@@ -12,7 +15,7 @@
   }
 
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'Titillium Web', Arial, sans-serif;
     background-color: #fefefe;
     color: #333;
     line-height: 1.5;
@@ -29,8 +32,8 @@
   }
 
   nav .logo {
-    font-weight: bold;
-    font-size: 1.2rem;
+    font-weight: normal;
+    font-size: 1.8rem;
   }
 
   nav ul {
@@ -42,12 +45,12 @@
   nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
   nav .logo-img img {
-    height: 32px;
-    width: 32px;
+    height: 40px;
+    width: 40px;
   }
 
   /* Intro */
@@ -58,7 +61,7 @@
     padding: 1rem 1.5rem;
     text-align: center;
     border-radius: 4px;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   /* Gallery */
@@ -140,7 +143,7 @@
       <li><a href="#">Contact</a></li>
     </ul>
     <div class="logo-img">
-      <img src="logo.png" alt="Onkka Logo">
+      <img src="onkkabagslogo.jpg" alt="Onkka Bags Logo">
     </div>
   </nav>
 
@@ -150,36 +153,234 @@
   </div>
 
   <!-- Gallery -->
-  <div class="gallery">
-    <a href="page1.html">
-      <img src="image1.jpg" alt="Bag 1">
-      <div class="overlay">Bag 1</div>
-    </a>
-    <a href="page2.html">
-      <img src="image2.jpg" alt="Bag 2">
-      <div class="overlay">Bag 2</div>
-    </a>
-    <a href="page3.html">
-      <img src="image3.jpg" alt="Bag 3">
-      <div class="overlay">Bag 3</div>
-    </a>
-    <a href="page4.html">
-      <img src="image4.jpg" alt="Bag 4">
-      <div class="overlay">Bag 4</div>
-    </a>
-    <a href="page5.html">
-      <img src="image5.jpg" alt="Bag 5">
-      <div class="overlay">Bag 5</div>
-    </a>
-    <a href="page6.html">
-      <img src="image6.jpg" alt="Bag 6">
-      <div class="overlay">Bag 6</div>
-    </a>
-    <a href="page7.html">
-      <img src="image7.jpg" alt="Bag 7">
-      <div class="overlay">Bag 7</div>
-    </a>
-  </div>
+<div class="gallery">
+
+  <!-- About1 -->
+  <a href="page1.html">
+    <picture>
+      <!-- AVIF -->
+      <source 
+        srcset="img/About1-320.avif 320w,
+                img/About1-500.avif 500w,
+                img/About1-800.avif 800w,
+                img/About1-1000.avif 1000w"
+        sizes="(max-width: 600px) 100vw,
+               (max-width: 1000px) 50vw,
+               33vw"
+        type="image/avif">
+      <!-- WebP -->
+      <source 
+        srcset="img/About1-320.webp 320w,
+                img/About1-500.webp 500w,
+                img/About1-800.webp 800w,
+                img/About1-1000.webp 1000w"
+        sizes="(max-width: 600px) 100vw,
+               (max-width: 1000px) 50vw,
+               33vw"
+        type="image/webp">
+      <!-- JPEG fallback -->
+      <img 
+        src="img/About1-500.jpg"
+        srcset="img/About1-320.jpg 320w,
+                img/About1-500.jpg 500w,
+                img/About1-800.jpg 800w,
+                img/About1-1000.jpg 1000w"
+        sizes="(max-width: 600px) 100vw,
+               (max-width: 1000px) 50vw,
+               33vw"
+        alt="About Onkka Bags"
+        loading="lazy" decoding="async">
+    </picture>
+    <div class="overlay">About Onkka Bags</div>
+  </a>
+
+  <!-- Luggage1 -->
+  <a href="page5.html">
+    <picture>
+      <source 
+        srcset="img/Luggage1-320.avif 320w,
+                img/Luggage1-500.avif 500w,
+                img/Luggage1-800.avif 800w,
+                img/Luggage1-1000.avif 1000w"
+        sizes="(max-width: 600px) 100vw,
+               (max-width: 1000px) 50vw,
+               33vw"
+        type="image/avif">
+      <source 
+        srcset="img/Luggage1-320.webp 320w,
+                img/Luggage1-500.webp 500w,
+                img/Luggage1-800.webp 800w,
+                img/Luggage1-1000.webp 1000w"
+        sizes="(max-width: 600px) 100vw,
+               (max-width: 1000px) 50vw,
+               33vw"
+        type="image/webp">
+      <img 
+        src="img/Luggage1-500.jpg"
+        srcset="img/Luggage1-320.jpg 320w,
+                img/Luggage1-500.jpg 500w,
+                img/Luggage1-800.jpg 800w,
+                img/Luggage1-1000.jpg 1000w"
+        sizes="(max-width: 600px) 100vw,
+               (max-width: 1000px) 50vw,
+               33vw"
+        alt="Handmade Luggage"
+        loading="lazy" decoding="async">
+    </picture>
+    <div class="overlay">Backpack Luggage</div>
+  </a>
+  
+  <!-- Backpack1 -->
+  <a href="page2.html">
+    <picture>
+      <source 
+        srcset="img/Backpack1-320.avif 320w,
+                img/Backpack1-500.avif 500w,
+                img/Backpack1-800.avif 800w,
+                img/Backpack1-1000.avif 1000w"
+        sizes="(max-width: 600px) 100vw,
+               (max-width: 1000px) 50vw,
+               33vw"
+        type="image/avif">
+      <source 
+        srcset="img/Backpack1-320.webp 320w,
+                img/Backpack1-500.webp 500w,
+                img/Backpack1-800.webp 800w,
+                img/Backpack1-1000.webp 1000w"
+        sizes="(max-width: 600px) 100vw,
+               (max-width: 1000px) 50vw,
+               33vw"
+        type="image/webp">
+      <img 
+        src="img/Backpack1-500.jpg"
+        srcset="img/Backpack1-320.jpg 320w,
+                img/Backpack1-500.jpg 500w,
+                img/Backpack1-800.jpg 800w,
+                img/Backpack1-1000.jpg 1000w"
+        sizes="(max-width: 600px) 100vw,
+               (max-width: 1000px) 50vw,
+               33vw"
+        alt="Handmade Backpack"
+        loading="lazy" decoding="async">
+    </picture>
+    <div class="overlay">Backpacks</div>
+  </a>
+
+<!-- Canoe1 -->
+<a href="page6.html">
+  <picture>
+    <!-- AVIF -->
+    <source 
+      srcset="img/Canoe1-320.avif 320w,
+              img/Canoe1-500.avif 500w,
+              img/Canoe1-800.avif 800w,
+              img/Canoe1-1000.avif 1000w"
+      sizes="(max-width: 600px) 100vw,
+             (max-width: 1000px) 50vw,
+             33vw"
+      type="image/avif">
+    <!-- WebP -->
+    <source 
+      srcset="img/Canoe1-320.webp 320w,
+              img/Canoe1-500.webp 500w,
+              img/Canoe1-800.webp 800w,
+              img/Canoe1-1000.webp 1000w"
+      sizes="(max-width: 600px) 100vw,
+             (max-width: 1000px) 50vw,
+             33vw"
+      type="image/webp">
+    <!-- JPEG fallback -->
+    <img 
+      src="img/Canoe1-500.jpg"
+      srcset="img/Canoe1-320.jpg 320w,
+              img/Canoe1-500.jpg 500w,
+              img/Canoe1-800.jpg 800w,
+              img/Canoe1-1000.jpg 1000w"
+      sizes="(max-width: 600px) 100vw,
+             (max-width: 1000px) 50vw,
+             33vw"
+      alt="Handmade Canoe Pack"
+      loading="lazy" decoding="async">
+  </picture>
+  <div class="overlay">Canoe Packs</div>
+</a>
+
+  <!-- Duffel1 -->
+  <a href="page3.html">
+    <picture>
+      <source 
+        srcset="img/Duffel1-320.avif 320w,
+                img/Duffel1-500.avif 500w,
+                img/Duffel1-800.avif 800w,
+                img/Duffel1-1000.avif 1000w"
+        sizes="(max-width: 600px) 100vw,
+               (max-width: 1000px) 50vw,
+               33vw"
+        type="image/avif">
+      <source 
+        srcset="img/Duffel1-320.webp 320w,
+                img/Duffel1-500.webp 500w,
+                img/Duffel1-800.webp 800w,
+                img/Duffel1-1000.webp 1000w"
+        sizes="(max-width: 600px) 100vw,
+               (max-width: 1000px) 50vw,
+               33vw"
+        type="image/webp">
+      <img 
+        src="img/Duffel1-500.jpg"
+        srcset="img/Duffel1-320.jpg 320w,
+                img/Duffel1-500.jpg 500w,
+                img/Duffel1-800.jpg 800w,
+                img/Duffel1-1000.jpg 1000w"
+        sizes="(max-width: 600px) 100vw,
+               (max-width: 1000px) 50vw,
+               33vw"
+        alt="Handmade Duffel Bag"
+        loading="lazy" decoding="async">
+    </picture>
+    <div class="overlay">Duffels</div>
+  </a>
+
+  <!-- Messenger1 -->
+  <a href="page4.html">
+    <picture>
+      <source 
+        srcset="img/Messenger1-320.avif 320w,
+                img/Messenger1-500.avif 500w,
+                img/Messenger1-800.avif 800w,
+                img/Messenger1-1000.avif 1000w"
+        sizes="(max-width: 600px) 100vw,
+               (max-width: 1000px) 50vw,
+               33vw"
+        type="image/avif">
+      <source 
+        srcset="img/Messenger1-320.webp 320w,
+                img/Messenger1-500.webp 500w,
+                img/Messenger1-800.webp 800w,
+                img/Messenger1-1000.webp 1000w"
+        sizes="(max-width: 600px) 100vw,
+               (max-width: 1000px) 50vw,
+               33vw"
+        type="image/webp">
+      <img 
+        src="img/Messenger1-500.jpg"
+        srcset="img/Messenger1-320.jpg 320w,
+                img/Messenger1-500.jpg 500w,
+                img/Messenger1-800.jpg 800w,
+                img/Messenger1-1000.jpg 1000w"
+        sizes="(max-width: 600px) 100vw,
+               (max-width: 1000px) 50vw,
+               33vw"
+        alt="Handmade Messenger Bag"
+        loading="lazy" decoding="async">
+    </picture>
+    <div class="overlay">Messenger Bags</div>
+  </a>
+
+
+
+ 
+</div>
 
   <!-- Footer -->
   <footer>
