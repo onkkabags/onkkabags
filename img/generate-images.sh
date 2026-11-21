@@ -16,6 +16,10 @@
 #        chmod +x generate-images.sh
 #   3. Run the script:
 #        ./generate-images.sh
+#
+#   If error, fix permissions: 
+		xattr -d com.apple.quarantine generate-images.sh
+		chmod +x generate-images.sh
 ################################################################################
 
 # Target widths
